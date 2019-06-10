@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Tip Calculator V2</string>
+    <string name="bill_amount">enter amount</string>
+    <string name="enter_amount_hint">Enter amount: $0.0 </string>
+    <string name="tip_label">Tip: </string>
+    <string name="total_label">Total: </string>
+    <string name="tip_text">$ 0.0</string>
+    <string name="person_text">$ 0.0</string>
+    <string name="tip_percent_text">15%</string>
+    <string name="total_text">$ 0.0</string>
+    <string name="round_tip">Round the tip</string>
+    <string name="round_total"> Round the total</string>
+    <string name="no_round">Do not round </string>
+    <string name="per_person">Per person: </string>
+    <string name="action_share_message">You selected Order.</string>
+    <string name="action_info_message">You selected Status.</string>
+
+    <string-array name="split_bill">
+        <item>1 person bill</item>
+        <item>Split the bill between 2</item>
+        <item>Split the bill between 3</item>
+        <item>Split the bill between 4</item>
+    </string-array>
+</resources>

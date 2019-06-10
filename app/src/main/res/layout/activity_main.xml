@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText_BillAmount"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:background="#BBDEFB"
+        android:ems="10"
+        android:hint="@string/enter_amount_hint"
+        android:inputType="numberDecimal"
+        android:theme="@style/MyEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/editText_BillAmount"
+        app:layout_constraintStart_toStartOf="@id/editText_BillAmount"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <TextView
+        android:id="@+id/tipPercentLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tip_percent_text"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBar"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/perPersonLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/per_person"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/perPerson"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipPercentLbl" />
+
+    <TextView
+        android:id="@+id/tipLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/tip_label"
+        app:layout_constraintEnd_toEndOf="@+id/tipPercentLbl"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tipPercentLbl"
+        app:layout_constraintTop_toBottomOf="@+id/perPersonLbl" />
+
+    <TextView
+        android:id="@+id/totalLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/total_label"
+        app:layout_constraintEnd_toEndOf="@+id/tipPercentLbl"
+        app:layout_constraintStart_toStartOf="@+id/tipPercentLbl"
+        app:layout_constraintTop_toTopOf="@+id/billTotal" />
+
+    <TextView
+        android:id="@+id/perPerson"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#FFCCBC"
+        android:text="@string/person_text"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        />
+
+    <TextView
+        android:id="@+id/tipTotal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#FFCCBC"
+        android:text="@string/tip_text"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/perPerson"
+        app:layout_constraintStart_toStartOf="@+id/perPerson"
+        app:layout_constraintTop_toBottomOf="@+id/perPerson" />
+
+    <TextView
+        android:id="@+id/billTotal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#FFCCBC"
+        android:lineSpacingExtra="18sp"
+        android:text="@string/tip_text"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@id/tipTotal" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/editText_BillAmount"
+        app:layout_constraintStart_toStartOf="@+id/editText_BillAmount"
+        app:layout_constraintTop_toBottomOf="@+id/editText_BillAmount" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/billTotal">
+
+        <RadioButton
+            android:id="@+id/noTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="noRounding"
+            android:text="@string/no_round" />
+
+        <RadioButton
+            android:id="@+id/tipRound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="tipRounding"
+            android:text="@string/round_tip" />
+
+        <RadioButton
+            android:id="@+id/totalRound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="totalRounding"
+            android:text="@string/round_total" />
+    </RadioGroup>
+
+
+</android.support.constraint.ConstraintLayout>
