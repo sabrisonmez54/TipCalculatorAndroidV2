@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.example.android.droidcafeinput.MainActivity">
+        <item
+            android:id="@+id/action_info"
+            android:orderInCategory="100"
+            android:title="Info"
+            android:icon="@drawable/ic_action_info"
+            app:showAsAction="never"
+            android:onClick="onInfoClick"
+            />
+    <item
+        android:id="@+id/action_share"
+        android:title="@string/menu_share"
+        android:icon="@drawable/ic_action_share"
+        android:onClick="onShareClick"/>
+
+</menu>

@@ -1,5 +1,6 @@
 package com.example.tipcalculatorv2;
 
+import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,11 @@ import java.lang.Math;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
+import android.support.v7.app.AlertDialog;
+import android.content.DialogInterface;
+import android.view.Menu;
+import android.view.MenuItem;
 
 
 public class MainActivity extends AppCompatActivity implements TextWatcher, SeekBar.OnSeekBarChangeListener, AdapterView.OnItemSelectedListener {
@@ -71,6 +77,14 @@ public class MainActivity extends AppCompatActivity implements TextWatcher, Seek
         if (spinner != null) {
             spinner.setAdapter(adapter);
         }
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
 
     @Override
@@ -193,4 +207,32 @@ public class MainActivity extends AppCompatActivity implements TextWatcher, Seek
         Toast.makeText(getApplicationContext(), message,
                 Toast.LENGTH_SHORT).show();
     }
+
+    public void onInfoClick(MenuItem item) {
+        final AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
+
+        alertDialog.setTitle("Info");
+
+        alertDialog.setMessage(R.string.info_message);
+
+        alertDialog.setPositiveButton("OK", new
+                DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // User clicked OK button.
+                        // ... Action to take when OK is clicked.
+                    }
+                });
+        alertDialog.show();
+    }
+    public void onShareClick(MenuItem item) {
+        String billReceipt = "Amount per person: " + perPersonText.getText().toString() + " " + "Tip amount: " + textViewTip.getText().toString() + " " +
+                "Total bill: " +  " "+ textViewBillAmount.getText().toString();
+
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, billReceipt);
+        sendIntent.setType("text/plain");
+        startActivity(sendIntent);
+    }
+
 }

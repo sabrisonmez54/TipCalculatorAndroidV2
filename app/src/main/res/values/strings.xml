@@ -11,9 +11,9 @@
     <string name="round_tip">Round the tip</string>
     <string name="round_total"> Round the total</string>
     <string name="no_round">Do not round </string>
+    <string name="menu_share">Share </string>
     <string name="per_person">Per person: </string>
-    <string name="action_share_message">You selected Order.</string>
-    <string name="action_info_message">You selected Status.</string>
+    <string name="info_message">You can use the menu to split the bill among friends, use the slider to set the tip amount.</string>
 
     <string-array name="split_bill">
         <item>1 person bill</item>
