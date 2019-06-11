@@ -9,7 +9,7 @@
 
     <EditText
         android:id="@+id/editText_BillAmount"
-        android:layout_width="300dp"
+        android:layout_width="275dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="50dp"
@@ -24,7 +24,7 @@
 
     <SeekBar
         android:id="@+id/seekBar"
-        android:layout_width="300dp"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="@+id/editText_BillAmount"
@@ -47,9 +47,10 @@
         android:id="@+id/perPersonLbl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
         android:text="@string/per_person"
-        android:textSize="12sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/perPerson"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +79,7 @@
 
     <TextView
         android:id="@+id/perPerson"
-        android:layout_width="300dp"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:background="#FFCCBC"
@@ -91,7 +92,7 @@
 
     <TextView
         android:id="@+id/tipTotal"
-        android:layout_width="300dp"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:background="#FFCCBC"
@@ -103,7 +104,7 @@
 
     <TextView
         android:id="@+id/billTotal"
-        android:layout_width="300dp"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:background="#FFCCBC"
@@ -116,7 +117,7 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="300dp"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"

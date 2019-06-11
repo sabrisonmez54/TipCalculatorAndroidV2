@@ -120,7 +120,8 @@ public class MainActivity extends AppCompatActivity implements TextWatcher, Seek
     public void onStopTrackingTouch(SeekBar seekBar) { }
 
     // calculate and display tip and total amounts
-    private void calculate() {
+    private void calculate()
+    {
         Log.d("MainActivity", "inside calculate method");
 
         // format percent and display in percentTextView
